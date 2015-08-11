@@ -11,10 +11,10 @@ import someproject.model.decoder.TT2Decoder_Rest.aTTimestamp;
 
 public class TT2Decoder {
     public static final String logtag = "TT2Decoder";
-    public TT2Decoder_Scan mTT2Decoder_Scan;
-    public TT2Decoder_Layer1 mTT2Decoder_Layer1;
-    public TT2Decoder_LayerMsg mTT2Decoder_LayerMsg;
-    public TT2Decoder_Rest mTT2Decoder_Rest;
+    public TT2Decoder_Scan			mTT2Decoder_Scan;
+    public TT2Decoder_Layer1		mTT2Decoder_Layer1;
+    public TT2Decoder_LayerMsg		mTT2Decoder_LayerMsg;
+    public TT2Decoder_Rest			mTT2Decoder_Rest;
     public int trace_year = 2015;
     
     TraceHistory history = new TraceHistory();
@@ -36,6 +36,6 @@ public class TT2Decoder {
     
     int getTraceYear ()
     {
-    	return trace_year; // TODO! from file header
+    	return trace_year; // year not available from trace header (only month+day+time), so assume current year. 
     }
 }
